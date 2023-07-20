@@ -35,7 +35,9 @@ function copiarScript() {
     const telefone = document.getElementById('tel').value;
     const operador= document.getElementById('operador').value;
 
-    const scriptFormatado = `MOTIVO: ${motivo}
+    const scriptFormatado = `CPF: ${cpfCnpj}
+
+MOTIVO: ${motivo}
 
 TEL.: ${telefone}
 
