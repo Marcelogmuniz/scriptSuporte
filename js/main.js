@@ -103,7 +103,6 @@ OP: ${operadorMoto}`;
     document.body.appendChild(tempElement);
     tempElement.select();
     document.execCommand('copy');
-    document.body.removeChild(tempElement);
 
     alert('O.S copiada para a área de transferência!');
 }
@@ -126,8 +125,8 @@ function formatarTelefoneOSMoto() {
     let motoTelefone = inputTelMoto.value.replace(/\D/g, ''); // Remove tudo que não é dígito (números) do motoTelefone
 
     if (motoTelefone.length === 11) {
-        // Formata motoTelefone celular (11 9 1234-5678)
-        motoTelefone = motoTelefone.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2 $3');
+        // Formata motoTelefone celular (11 91234-5678)
+        motoTelefone = motoTelefone.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
     } else if (motoTelefone.length === 10 || motoTelefone.length === 9) {
         // Formata motoTelefone fixo com DDD ou celular sem DDD (11 1234-5678)
         motoTelefone = motoTelefone.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
