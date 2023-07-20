@@ -53,8 +53,8 @@ OP.: ${operador}`;
 }
 
 function limparScript() {
-    document.getElementById('nomeCliente').value = '';
-    document.getElementById('motivo').value = '';
+    document.getElementById('scriptCliente').value = '';
+    document.getElementById('scriptMotivo').value = '';
     document.getElementById('cpf').value = '';
     document.getElementById('tel').value = '';
 }
@@ -115,9 +115,12 @@ function limparOSMoto() {
     document.getElementById('motoProcedimentos').value = '';
     document.getElementById('motoSinalStatus').value = '';
     document.getElementById('motoConcentrador').value = '';
+    document.getElementById('motoNAS').value = '';
     document.getElementById('motoHistoricoQuedas').value = '';
+    document.getElementById('osSuporte').value = 'selecione';
+    document.getElementById('opcaoSelecionada').style.display = 'none';
     document.getElementById('motoUltimaOS').value = '';
-    document.getElementById('operadorMoto').value = '';
+    document.getElementById('operadorOSMoto').value = '';
 }
 
 function formatarTelefoneOSMoto() {
