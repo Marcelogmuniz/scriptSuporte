@@ -37,9 +37,9 @@ function copiarScript() {
 
     const scriptFormatado = `MOTIVO: ${motivo}
 
-    TEL.: ${telefone}
+TEL.: ${telefone}
 
-     OP.: ${operador}`;
+OP.: ${operador}`;
 
     // Copiar o texto para a área de transferência (clipboard)
     const tempElement = document.createElement('textarea');
@@ -47,6 +47,7 @@ function copiarScript() {
     document.body.appendChild(tempElement);
     tempElement.select();
     document.execCommand('copy');
+    document.body.removeChild(tempElement);
 
     alert('Script copiado para a área de transferência!');
 }
@@ -102,6 +103,7 @@ OP: ${operadorMoto}`;
     document.body.appendChild(tempElement);
     tempElement.select();
     document.execCommand('copy');
+    document.body.removeChild(tempElement);
 
     alert('O.S copiada para a área de transferência!');
 }
