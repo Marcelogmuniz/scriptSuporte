@@ -1,1 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+body {
+    font-family: "Montserrat";
+}
+
+.navbar-index {
+    background-color: #ef233c;
+}
+
+.navbar-brand {
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
+    transition: 0.3 ease-in-out;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3 ease-in-out;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #8d99ae;
+}
+
+.nav-link:focus {
+    color: #8d99ae;
+}
+
+.div-script {
+    padding: 0;
+    width: 30rem;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.input-script {
+    width: 30rem;
+    border-color: #ef233c;
+}
+
+input[type="text"]:focus {
+    border-color: #ef233c;
+    box-shadow: 0 0 0 0.2rem rgba(239, 35, 60, 1);
+    font-weight: 600;
+}
+
+textarea:focus {
+    border-color: #ef233c;
+    box-shadow: 0 0 0 0.2rem rgba(239, 35, 60, 1);
+    font-weight: 600;
+}
+
+.btn-copy-script {
+    margin-top: 1rem;
+    width: 30rem;
+    font-weight: 600;
+    background-color: #ef233c;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-copy-script:hover {
+    background-color: #9E031D;
+    color: #fff;
+}
+
+.btn-limpar {
+    margin-top: 1rem;
+    width: 30rem;
+    font-weight: 600;
+    background-color: #8d99ae;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-limpar:hover {
+    background-color: #616977;
+    color: #fff;
+}
