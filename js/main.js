@@ -35,13 +35,11 @@ function copiarScript() {
     const telefone = document.getElementById('tel').value;
     const operador= document.getElementById('operador').value;
 
-    const scriptFormatado = `CPF/CNPJ Cliente: ${cpfCnpj}
+    const scriptFormatado = `MOTIVO: ${motivo}
 
-MOTIVO: ${motivo}
+    TEL.: ${telefone}
 
-TEL.: ${telefone}
-
-OP.: ${operador}`;
+     OP.: ${operador}`;
 
     // Copiar o texto para a área de transferência (clipboard)
     const tempElement = document.createElement('textarea');
@@ -49,7 +47,6 @@ OP.: ${operador}`;
     document.body.appendChild(tempElement);
     tempElement.select();
     document.execCommand('copy');
-    document.body.removeChild(tempElement);
 
     alert('Script copiado para a área de transferência!');
 }
@@ -60,10 +57,6 @@ function limparScript() {
     document.getElementById('cpf').value = '';
     document.getElementById('tel').value = '';
 }
-
-
-
-
 
 function copiarOSMoto() {
     const cliente = document.getElementById('motoCliente').value;
@@ -109,7 +102,6 @@ OP: ${operadorMoto}`;
     document.body.appendChild(tempElement);
     tempElement.select();
     document.execCommand('copy');
-    document.body.removeChild(tempElement);
 
     alert('O.S copiada para a área de transferência!');
 }
