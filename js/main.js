@@ -89,7 +89,7 @@ function copiarOSMoto() {
 
 DATA E HORÁRIO: ${dataFormatada} - ${horario}
 PLANO: ${plano}
-REALATO: ${solicitacao}
+RELATO: ${solicitacao}
 TRATATIVA: ${procedimentos}
 O.S DE SUPORTE NOS ÚLTIMOS 3 MESES: ${osSuporteTexto}
 SE SIM: ${ultimaOS}
