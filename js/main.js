@@ -60,14 +60,24 @@ function limparScript() {
 }
 
 function copiarOSMoto() {
-    const cliente = document.getElementById('motoCliente').value;
-    const agendamento = document.getElementById('motoAgendamento').value;
+    const dataAgendamento = document.getElementById('motoAgendamento').value;
+    // Extrair o dia, mês e ano da data ISO
+    const ano = dataAgendamento.substring(0, 4);
+    const mes = dataAgendamento.substring(5, 7);
+    const dia = dataAgendamento.substring(8, 10);
+    // Formatar a data no padrão dd/mm/yyyy
+    const dataFormatada = `${dia}/${mes}/${ano}`;
+    // Exibir a data formatada ao usuário
+    
+    const horario = document.getElementById('motoHora').value;
+    const plano = document.getElementById('motoPlano').value;
     const contatoMoto = document.getElementById('motoTel').value;
     const solicitacao = document.getElementById('motoSolicitacao').value;
     const procedimentos = document.getElementById('motoProcedimentos').value;
     const sinalStatus = document.getElementById('motoSinalStatus').value;
     const concentrador = document.getElementById('motoConcentrador').value;
     const nas = document.getElementById('motoNAS').value;
+    const pontoReferencia = document.getElementById('motoEndReferencia').value;
     const historicoQuedas = document.getElementById('motoHistoricoQuedas').value;
     const ultimaOS = document.getElementById('motoUltimaOS').value;
     const selectElement = document.getElementById('osSuporte');
@@ -77,24 +87,22 @@ function copiarOSMoto() {
 
     const osFormatada = `O.S MOTO
 
-CLIENTE: ${cliente}
-AGENDAMENTO: ${agendamento}
-CONTATO: ${contatoMoto}
-
-SOLICITAÇÃO: ${solicitacao}
-
-PROCEDIMENTOS REALIZADOS: ${procedimentos}
-
-SINAL/STATUS ONU: ${sinalStatus}
-CONCENTRADOR: ${concentrador}
-NAS: ${nas}
+DATA E HORÁRIO: ${dataFormatada} - ${horario}
+PLANO: ${plano}
+REALATO: ${solicitacao}
+TRATATIVA: ${procedimentos}
+O.S DE SUPORTE NOS ÚLTIMOS 3 MESES: ${osSuporteTexto}
+SE SIM: ${ultimaOS}
 
 HISTÓRICO DE QUEDAS: 
 ${historicoQuedas}
 
-O.S DE SUPORTE NOS ÚLTIMOS 3 MESES: ${osSuporteTexto}
-SE SIM: ${ultimaOS}
-
+*INFORMAÇÕES TÉCNICAS*
+SINAL/STATUS ONU: ${sinalStatus}
+CONCENTRADOR: ${concentrador}
+NAS: ${nas}
+PONTO DE REFERÊNCIA: ${pontoReferencia}
+TELEFONE: ${contatoMoto}
 OP: ${operadorMoto}`;
 
     // Copiar o texto para a área de transferência (clipboard)
@@ -103,19 +111,22 @@ OP: ${operadorMoto}`;
     document.body.appendChild(tempElement);
     tempElement.select();
     document.execCommand('copy');
+    document.body.removeChild(tempElement);
 
     alert('O.S copiada para a área de transferência!');
 }
 
 function limparOSMoto() {
-    document.getElementById('motoCliente').value = '';
     document.getElementById('motoAgendamento').value = '';
+    document.getElementById('motoHora').value = '';
+    document.getElementById('motoPlano').value = '';
     document.getElementById('motoTel').value = '';
     document.getElementById('motoSolicitacao').value = '';
     document.getElementById('motoProcedimentos').value = '';
     document.getElementById('motoSinalStatus').value = '';
     document.getElementById('motoConcentrador').value = '';
     document.getElementById('motoNAS').value = '';
+    document.getElementById('motoEndReferencia').value = '';
     document.getElementById('motoHistoricoQuedas').value = '';
     document.getElementById('osSuporte').value = 'selecione';
     document.getElementById('opcaoSelecionada').style.display = 'none';
