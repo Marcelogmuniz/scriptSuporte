@@ -2,17 +2,16 @@
 
 body {
     font-family: "Montserrat";
+    background-color: #161a1d;
+    color: white;
 }
 
 .navbar-index {
     background-color: #ef233c;
 }
 
-.navbar-brand {
-    font-size: 2em;
-    font-weight: 700;
-    color: #fff;
-    transition: 0.3 ease-in-out;
+.logo-navbar {
+    aspect-ratio: 21/9;
 }
 
 .nav-link {
@@ -36,22 +35,22 @@ body {
 
 .form-label {
     font-weight: 500;
+    color: #fff;
 }
 
-.input-script {
+.input-script, .form-select:valid {
     width: 30rem;
-    border-color: #ef233c;
+    background-color: transparent;
+    border: 1px solid #ef233c;
+    box-shadow: 0 0 0 0.1rem rgba(239, 35, 60, 1);
+    color: #fff;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus, .form-select:valid:focus, textarea:valid:focus {
+    background-color: transparent;
+    color: #fff;
     border-color: #ef233c;
-    box-shadow: 0 0 0 0.2rem rgba(239, 35, 60, 1);
-    font-weight: 600;
-}
-
-textarea:focus {
-    border-color: #ef233c;
-    box-shadow: 0 0 0 0.2rem rgba(239, 35, 60, 1);
+    box-shadow: 0 0 0 0.3rem rgba(239, 35, 60, 1);
     font-weight: 600;
 }
 
@@ -81,4 +80,66 @@ textarea:focus {
 .btn-limpar:hover {
     background-color: #616977;
     color: #fff;
+}
+
+/* ABA SERVIÇOS */
+
+.main-servicos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+    row-gap: 50px;
+    column-gap: 50px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.bloco-servicos {
+    min-width: 500px;
+    min-height: 250px;
+    background-color: #ef233c;
+    border-radius: 15px;
+    border: none;
+
+    font-style: "Montserrat";
+    font-weight: 700;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.modal-content {
+    background-color: #161a1d;
+}
+
+.modal-header button {
+    background-color: #ef233c;
+}
+
+.btn-copiar {
+    width: 25rem;
+    font-weight: 600;
+    background-color: #ef233c;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-cancel {
+    width: 25rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-copiar:hover {
+    background-color: #9E031D;
+    color: #fff;
+}
+
+.btn-cancel:hover {
+    border: 1px solid #fff;
+    color: #ef233c;
 }
