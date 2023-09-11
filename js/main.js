@@ -1,5 +1,5 @@
 function formatarDocumento() {
-    const inputCpfCnpj= document.getElementById('cpf');
+    const inputCpfCnpj = document.getElementById('cpf');
     let valor = inputCpfCnpj.value.replace(/\D/g, ''); // Remove tudo que não é dígito (números) do valor
 
     if (valor.length <= 11) {
@@ -33,7 +33,7 @@ function copiarScript() {
     const motivo = document.getElementById('scriptMotivo').value;
     const cpfCnpj = document.getElementById('cpf').value;
     const telefone = document.getElementById('tel').value;
-    const operador= document.getElementById('operador').value;
+    const operador = document.getElementById('operador').value;
 
     const scriptFormatado = `MOTIVO: ${motivo}
 
@@ -68,7 +68,7 @@ function copiarOSMoto() {
     // Formatar a data no padrão dd/mm/yyyy
     const dataFormatada = `${dia}/${mes}/${ano}`;
     // Exibir a data formatada ao usuário
-    
+
     const horario = document.getElementById('motoHora').value;
     const plano = document.getElementById('motoPlano').value;
     const contatoMoto = document.getElementById('motoTel').value;
@@ -131,7 +131,6 @@ function limparOSMoto() {
     document.getElementById('osSuporte').value = 'selecione';
     document.getElementById('opcaoSelecionada').style.display = 'none';
     document.getElementById('motoUltimaOS').value = '';
-    document.getElementById('operadorOSMoto').value = '';
 }
 
 function formatarTelefoneOSMoto() {

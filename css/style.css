@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --red-color: #FF2A30;
+}
+
 body {
     font-family: "Montserrat";
     background-color: #161a1d;
@@ -7,11 +11,13 @@ body {
 }
 
 .navbar-index {
-    background-color: #ef233c;
+    background-color: var(--red-color);
+    padding: 1rem 2rem;
 }
 
-.logo-navbar {
-    aspect-ratio: 21/9;
+.logo-navbar img {
+    width: 8rem;
+    height: auto;
 }
 
 .nav-link {
@@ -20,7 +26,8 @@ body {
     transition: 0.3 ease-in-out;
 }
 
-.navbar-brand:hover, .nav-link:hover {
+.navbar-brand:hover,
+.nav-link:hover {
     color: #8d99ae;
 }
 
@@ -38,19 +45,25 @@ body {
     color: #fff;
 }
 
-.input-script, .form-select:valid {
+.input-script,
+.form-select:valid {
     width: 30rem;
     background-color: transparent;
-    border: 1px solid #ef233c;
-    box-shadow: 0 0 0 0.1rem rgba(239, 35, 60, 1);
+    border: 1px solid var(--red-color);
+    box-shadow: 0 0 0 0.1rem var(--red-color);
     color: #fff;
+    transition: 0.2s ease-in-out;
 }
 
-input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus, .form-select:valid:focus, textarea:valid:focus {
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+.form-select:valid:focus,
+textarea:valid:focus {
     background-color: transparent;
     color: #fff;
-    border-color: #ef233c;
-    box-shadow: 0 0 0 0.3rem rgba(239, 35, 60, 1);
+    border-color: var(--red-color);
+    box-shadow: 0 0 0 0.3rem var(--red-color);
     font-weight: 600;
 }
 
@@ -58,7 +71,7 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus, .f
     margin-top: 1rem;
     width: 30rem;
     font-weight: 600;
-    background-color: #ef233c;
+    background-color: var(--red-color);
     color: #fff;
     transition: 0.3s ease-in-out;
 }
@@ -89,7 +102,7 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus, .f
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    
+
     row-gap: 50px;
     column-gap: 50px;
 
@@ -100,7 +113,7 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus, .f
 .bloco-servicos {
     min-width: 500px;
     min-height: 250px;
-    background-color: #ef233c;
+    background-color: var(--red-color);
     border-radius: 15px;
     border: none;
 
@@ -115,19 +128,19 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus, .f
 }
 
 .modal-header button {
-    background-color: #ef233c;
+    background-color: var(--red-color);
 }
 
 .btn-copiar {
-    width: 25rem;
+    width: 30rem;
     font-weight: 600;
-    background-color: #ef233c;
+    background-color: var(--red-color);
     color: #fff;
     transition: 0.3s ease-in-out;
 }
 
 .btn-cancel {
-    width: 25rem;
+    width: 30rem;
     font-weight: 600;
     background-color: transparent;
     color: #fff;
@@ -141,5 +154,5 @@ input[type="text"]:focus, input[type="date"]:focus, input[type="time"]:focus, .f
 
 .btn-cancel:hover {
     border: 1px solid #fff;
-    color: #ef233c;
+    color: var(--red-color);
 }
