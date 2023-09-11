@@ -50,9 +50,6 @@ OP: ${enderecoOperador}`;
     tempElement.select();
     document.execCommand('copy');
 
-    // Remover o elemento temporário
-    document.body.removeChild(tempElement);
-
     // Alerta de sucesso
     alert('O.S Mudança de endereço copiada para a área de transferência!');
 }
