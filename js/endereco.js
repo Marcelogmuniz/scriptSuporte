@@ -49,7 +49,18 @@ OP: ${enderecoOperador}`;
     // Selecionar e copiar o texto
     tempElement.select();
     document.execCommand('copy');
+    document.body.removeChild(tempElement);
 
     // Alerta de sucesso
     alert('O.S Mudança de endereço copiada para a área de transferência!');
+}
+
+function limparMudancaEndereco() {
+    document.getElementById("enderecoCliente").value = '';
+    document.getElementById('enderecoAgendamento').value = '';
+    document.getElementById("enderecoContato").value = '';
+    document.getElementById("enderecoAtual").value = '';
+    document.getElementById("enderecoNovo").value = '';
+    document.getElementById("enderecoReferencia").value = '';
+    document.getElementById("enderecoMaps").value = '';
 }
