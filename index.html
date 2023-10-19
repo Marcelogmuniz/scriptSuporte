@@ -45,15 +45,41 @@
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     SERVIÇOS
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><button class="nav-link" id="pills-endereco-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-endereco" type="button" role="tab"
+                                            aria-controls="pills-endereco" aria-selected="true">
+                                            MUDANÇA DE ENDEREÇO
+                                        </button>
+                                    </li>
+
+                                    <!-- MUDANÇA DE COMODO -->
+                                    <li><button class="nav-link" id="pills-comodo-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-comodo" type="button" role="tab"
+                                            aria-controls="pills-comodo" aria-selected="true">
+                                            MUDANÇA DE COMODO
+                                        </button>
+                                    </li>
+
+                                    <!-- PONTO ADICIONAL -->
+                                    <li><button class="nav-link" id="pills-adicional-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-adicional" type="button" role="tab"
+                                            aria-controls="pills-adicional" aria-selected="true">
+                                            PONTO ADICIONAL
+                                        </button>
+                                    </li>
+
+                                    <!-- TROCA DE TECNOLOGIA -->
+                                    <li><button class="nav-link" id="pills-tecnologia-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-tecnologia" type="button" role="tab"
+                                            aria-controls="pills-tecnologia" aria-selected="true">
+                                            TROCA DE TECNOLOGIA
+                                        </button>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -65,7 +91,7 @@
 
     <br>
 
-    <div class="tab-content mb-3">
+    <d class="tab-content mb-3">
         <div class="div-script container tab-pane fade show active" id="pills-ligacao" role="tabpanel"
             aria-labelledby="pills-ligacao-tab">
             <h2 class="text-center mx-auto mb-3">SCRIPT PARA LIGAÇÃO</h2>
@@ -93,11 +119,10 @@
             </div>
             <button type="button" class="btn btn-copy-script" onclick="copiarScript()">Copiar Script</button>
             <br>
-            <button type="button" class="btn btn-limpar" onclick="limparScript()">Limpar</button>
+            <button type="button" class="btn btn-limpar mb-4" onclick="limparScript()">Limpar</button>
         </div>
 
         <!-- ABA O.S MOTO -->
-
         <div class="container tab-pane fade" id="pills-moto" role="tabpanel" aria-labelledby="pills-moto-tab">
             <h2 class="text-center mx-auto">O.S MOTO</h2>
             <div class="sides-moto d-flex flex-row justify-content-between w-100 ps-5 pe-5 mt-3 mb-3">
@@ -168,14 +193,13 @@
                     </div>
                 </div>
             </div>
-            <div class="button-osmoto d-flex flex-row justify-content-around mb-3">
-                <button type="button" class="btn btn-copy-script" onclick="copiarOSMoto()">Copiar O.S</button>
+            <div class="button-osmoto d-flex flex-row justify-content-around mb-3 ms-3 me-3">
                 <button type="button" class="btn btn-limpar" onclick="limparOSMoto()">Limpar O.S</button>
+                <button type="button" class="btn btn-copy-script" onclick="copiarOSMoto()">Copiar O.S</button>
             </div>
         </div>
 
         <!-- O.S CARRO -->
-
         <div class="div-script container tab-pane fade" id="pills-carro" role="tabpanel"
             aria-labelledby="pills-carro-tab">
             <h2 class="text-center mx-auto mb-3">O.S CARRO</h2>
@@ -200,266 +224,217 @@
                 <label class="form-label">Operador</label>
                 <input type="text" class="input-script form-control" id="carroOperador">
             </div>
-            <button type="button" class="btn btn-copy-script" onclick="copiarScript()">Copiar Script</button>
+            <button type="button" class="btn btn-copy-script" onclick="copiarOSCarro()">Copiar Script</button>
             <br>
-            <button type="button" class="btn btn-limpar" onclick="limparScript()">Limpar</button>
+            <button type="button" class="btn btn-limpar" onclick="limparOSCarro()">Limpar</button>
         </div>
 
-        <!-- O.S CARRO -->
-
-        <div class="div-script container tab-pane fade" id="pills-servicos" role="tabpanel"
-            aria-labelledby="pills-servicos-tab">
-            <h2 class="text-center mx-auto mb-3">SERVIÇOS</h2>
-
-            <div class="main-servicos">
-                <!-- MUDANÇA DE ENDEREÇO -->
-                <button type="button" class="bloco-servicos mudanca-endereco" data-bs-toggle="modal"
-                    data-bs-target="#mudancaEndereco">
-                    MUDANÇA DE ENDEREÇO
-                </button>
-
-                <!-- MUDANÇA DE COMODO -->
-                <button type="button" class="bloco-servicos mudanca-comodo" data-bs-toggle="modal"
-                    data-bs-target="#mudancaComodo">
-                    MUDANÇA DE COMODO
-                </button>
-
-                <!-- PONTO ADICIONAL -->
-                <button type="button" class="bloco-servicos ponto-adicional" data-bs-toggle="modal"
-                    data-bs-target="#pontoAdicional">
-                    PONTO ADICIONAL
-                </button>
-
-                <!-- TROCA DE TECNOLOGIA -->
-                <button type="button" class="bloco-servicos troca-router" data-bs-toggle="modal"
-                    data-bs-target="#trocaTecnologia">
-                    TROCA DE TECNOLOGIA
-                </button>
-            </div>
-
-            <div class="modal fade" id="mudancaEndereco" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-xl">
-                    <div class="modal-content align-items-center">
-                        <div class="modal-header w-100 justify-content-around">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">MUDANÇA DE ENDEREÇO</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body w-100 d-flex justify-content-around align-items-center">
-                            <div class="modal-a">
-                                <div class="mb-3">
-                                    <label class="form-label">Cliente</label>
-                                    <input type="text" class="input-script form-control" id="enderecoCliente">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Agendamento</label>
-                                    <input type="date" class="input-script form-control" id="enderecoAgendamento">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Contato</label>
-                                    <input type="text" class="input-script form-control" id="enderecoContato"
-                                        onkeyup="formatarTelEndereco()" maxlength="15">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Endereço Atual</label>
-                                    <input type="text" class="input-script form-control" id="enderecoAtual">
-                                </div>
-                            </div>
-
-
-                            <div class="modal-b">
-                                <div class="mb-3">
-                                    <label class="form-label">Endereço Novo</label>
-                                    <input type="text" class="input-script form-control" id="enderecoNovo">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Referência</label>
-                                    <input type="text" class="input-script form-control" id="enderecoReferencia">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Localização Google Maps</label>
-                                    <input type="text" class="input-script form-control" id="enderecoMaps">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Operador</label>
-                                    <input type="text" class="input-script form-control" id="enderecoOperador">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal-footer justify-content-around w-100">
-                            <button type="button" class="btn btn-modal btn-cancel"
-                                data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-modal btn-copiar"
-                                onclick="copiarMudancaEndereco()">Copiar
-                                O.S</button>
-                        </div>
+        <!-- DIV - MUDANÇA DE ENDEREÇO -->
+        <div class="container tab-pane fade show" id="pills-endereco" role="tabpanel"
+            aria-labelledby="pills-endereco-tab">
+            <h2 class="text-center mx-auto mb-3">MUDANÇA DE ENDEREÇO</h2>
+            <div class="d-flex flex-row justify-content-between me-5 ms-5">
+                <div class="modal-a">
+                    <div class="mb-3">
+                        <label class="form-label">Cliente</label>
+                        <input type="text" class="input-script form-control" id="enderecoCliente">
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label">Agendamento</label>
+                        <input type="date" class="input-script form-control" id="enderecoAgendamento">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Contato</label>
+                        <input type="text" class="input-script form-control" id="enderecoContato"
+                            onkeyup="formatarTelEndereco()" maxlength="15">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Endereço Atual</label>
+                        <input type="text" class="input-script form-control" id="enderecoAtual">
+                    </div>
+                    <button type="button" class="btn btn-limpar mt-3" data-bs-dismiss="modal"
+                        onclick="limparMudancaEndereco()">Limpar</button>
+                </div>
+
+                <div class="modal-b">
+                    <div class="mb-3">
+                        <label class="form-label">Endereço Novo</label>
+                        <input type="text" class="input-script form-control" id="enderecoNovo">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Referência</label>
+                        <input type="text" class="input-script form-control" id="enderecoReferencia">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Localização Google Maps</label>
+                        <input type="text" class="input-script form-control" id="enderecoMaps">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Operador</label>
+                        <input type="text" class="input-script form-control" id="enderecoOperador">
+                    </div>
+                    <button type="button" class="btn btn-copy-script mt-3"
+                        onclick="copiarMudancaEndereco()">CopiarO.S</button>
                 </div>
             </div>
+        </div>
 
-            <div class="modal fade" id="mudancaComodo" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content align-items-center">
-                        <div class="modal-header w-100 justify-content-around">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">MUDANÇA DE CÔMODO</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
+        <!-- DIV - MUDANÇA DE CÔMODO -->
+        <div class="modal fade" id="mudancaComodo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content align-items-center">
+                    <div class="modal-header w-100 justify-content-around">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">MUDANÇA DE CÔMODO</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
 
-                        <div class="modal-body w-100 d-flex flex-column justify-content-center align-items-center">
-                            <div class="mb-3">
-                                <label class="form-label">Cliente</label>
-                                <input type="text" class="input-script form-control" id="enderecoCliente">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Agendamento</label>
-                                <input type="date" class="input-script form-control" id="enderecoAgendamento">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Contato</label>
-                                <input type="text" class="input-script form-control" id="enderecoContato"
-                                    onkeyup="formatarTelEndereco()" maxlength="15">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Solicitação</label>
-                                <textarea type="text" class="input-script form-control"
-                                    id="carroSolicitacao"></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Operador</label>
-                                <input type="text" class="input-script form-control" id="enderecoOperador">
-                            </div>
+                    <div class="modal-body w-100 d-flex flex-column justify-content-center align-items-center">
+                        <div class="mb-3">
+                            <label class="form-label">Cliente</label>
+                            <input type="text" class="input-script form-control" id="enderecoCliente">
                         </div>
-                        <div class="modal-footer justify-content-around w-100">
-                            <button type="button" class="btn btn-modal btn-copiar"
-                                onclick="copiarMudancaEndereco()">Copiar
-                                O.S</button>
-                            <button type="button" class="btn btn-modal btn-cancel"
-                                data-bs-dismiss="modal">Cancelar</button>
+                        <div class="mb-3">
+                            <label class="form-label">Agendamento</label>
+                            <input type="date" class="input-script form-control" id="enderecoAgendamento">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contato</label>
+                            <input type="text" class="input-script form-control" id="enderecoContato"
+                                onkeyup="formatarTelEndereco()" maxlength="15">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Solicitação</label>
+                            <textarea type="text" class="input-script form-control" id="carroSolicitacao"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Operador</label>
+                            <input type="text" class="input-script form-control" id="enderecoOperador">
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="pontoAdicional" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content align-items-center">
-                        <div class="modal-header w-100 justify-content-around">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">PONTO ADICIONAL/REDE INTERNA</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body w-100 d-flex flex-column justify-content-center align-items-center">
-
-                            <div class="mb-3">
-                                <label class="form-label">Cliente</label>
-                                <input type="text" class="input-script form-control" id="adicionalCliente">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Agendamento</label>
-                                <input type="date" class="input-script form-control" id="adicionalAgendamento">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Contato</label>
-                                <input type="text" class="input-script form-control" id="adicionalContato"
-                                    onkeyup="formatarTelAdicional()" maxlength="15">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Cliente possui roteador adicional?</label>
-                                <select class="form-select" id="possuiRouter">
-                                    <option selected value="selecione">Selecione uma opção</option>
-                                    <option value="sim">Sim</option>
-                                    <option value="nao">Nao</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Operador</label>
-                                <input type="text" class="input-script form-control" id="adicionalOperador">
-                            </div>
-                        </div>
-
-                        <div class="modal-footer justify-content-around w-100">
-                            <button type="button" class="btn btn-modal btn-copiar"
-                                onclick="copiarMudancaEndereco()">Copiar
-                                O.S</button>
-                            <button type="button" class="btn btn-modal btn-cancel"
-                                data-bs-dismiss="modal">Cancelar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="trocaTecnologia" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content align-items-center">
-                        <div class="modal-header w-100 justify-content-around">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">MUDANÇA DE ENDEREÇO</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body w-100 d-flex flex-column justify-content-center align-items-center">
-
-                            <div class="mb-3">
-                                <label class="form-label">Cliente</label>
-                                <input type="text" class="input-script form-control" id="enderecoCliente">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Agendamento</label>
-                                <input type="date" class="input-script form-control" id="enderecoAgendamento">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Contato</label>
-                                <input type="text" class="input-script form-control" id="enderecoContato"
-                                    onkeyup="formatarTelEndereco()" maxlength="15">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Endereço Atual</label>
-                                <input type="text" class="input-script form-control" id="enderecoAtual">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Endereço Novo</label>
-                                <input type="text" class="input-script form-control" id="enderecoNovo">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Referência</label>
-                                <input type="text" class="input-script form-control" id="enderecoReferencia">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Localização Google Maps</label>
-                                <input type="text" class="input-script form-control" id="enderecoMaps">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Operador</label>
-                                <input type="text" class="input-script form-control" id="enderecoOperador">
-                            </div>
-                        </div>
-
-                        <div class="modal-footer justify-content-around w-100">
-                            <button type="button" class="btn btn-modal btn-copiar"
-                                onclick="copiarMudancaEndereco()">Copiar
-                                O.S</button>
-                            <button type="button" class="btn btn-modal btn-cancel"
-                                data-bs-dismiss="modal">Cancelar</button>
-                        </div>
+                    <div class="modal-footer justify-content-around w-100">
+                        <button type="button" class="btn btn-modal btn-copiar" onclick="copiarMudancaEndereco()">Copiar
+                            O.S</button>
+                        <button type="button" class="btn btn-modal btn-cancel" data-bs-dismiss="modal">Cancelar</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/endereco.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-        crossorigin="anonymous"></script>
+        <!-- DIV - PONTO ADICIONAL -->
+        <div class="modal fade" id="pontoAdicional" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content align-items-center">
+                    <div class="modal-header w-100 justify-content-around">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">PONTO ADICIONAL/REDE INTERNA</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body w-100 d-flex flex-column justify-content-center align-items-center">
+
+                        <div class="mb-3">
+                            <label class="form-label">Cliente</label>
+                            <input type="text" class="input-script form-control" id="adicionalCliente">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Agendamento</label>
+                            <input type="date" class="input-script form-control" id="adicionalAgendamento">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contato</label>
+                            <input type="text" class="input-script form-control" id="adicionalContato"
+                                onkeyup="formatarTelAdicional()" maxlength="15">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Cliente possui roteador adicional?</label>
+                            <select class="form-select" id="possuiRouter">
+                                <option selected value="selecione">Selecione uma opção</option>
+                                <option value="sim">Sim</option>
+                                <option value="nao">Nao</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Operador</label>
+                            <input type="text" class="input-script form-control" id="adicionalOperador">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-around w-100">
+                        <button type="button" class="btn btn-modal btn-copiar" onclick="copiarMudancaEndereco()">Copiar
+                            O.S</button>
+                        <button type="button" class="btn btn-modal btn-cancel" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIV - TROCA DE TECNOLOGIA -->
+        <div class="modal fade" id="trocaTecnologia" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content align-items-center">
+                    <div class="modal-header w-100 justify-content-around">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">MUDANÇA DE ENDEREÇO</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body w-100 d-flex flex-column justify-content-center align-items-center">
+
+                        <div class="mb-3">
+                            <label class="form-label">Cliente</label>
+                            <input type="text" class="input-script form-control" id="enderecoCliente">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Agendamento</label>
+                            <input type="date" class="input-script form-control" id="enderecoAgendamento">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Contato</label>
+                            <input type="text" class="input-script form-control" id="enderecoContato"
+                                onkeyup="formatarTelEndereco()" maxlength="15">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Endereço Atual</label>
+                            <input type="text" class="input-script form-control" id="enderecoAtual">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Endereço Novo</label>
+                            <input type="text" class="input-script form-control" id="enderecoNovo">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Referência</label>
+                            <input type="text" class="input-script form-control" id="enderecoReferencia">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Localização Google Maps</label>
+                            <input type="text" class="input-script form-control" id="enderecoMaps">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Operador</label>
+                            <input type="text" class="input-script form-control" id="enderecoOperador">
+                        </div>
+                    </div>
+
+                    <div class="modal-footer justify-content-around w-100">
+                        <button type="button" class="btn btn-modal btn-copiar" onclick="copiarMudancaEndereco()">Copiar
+                            O.S</button>
+                        <button type="button" class="btn btn-modal btn-cancel" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <script src="js/main.js"></script>
+        <script src="js/endereco.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+            integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
