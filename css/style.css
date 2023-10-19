@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Montserrat", Arial, sans-serif;
+    font-family: "Montserrat";
     background-color: #161a1d;
     color: white;
 }
@@ -129,4 +129,8 @@ textarea:valid:focus {
 .btn-cancel:hover {
     border: 1px solid #fff;
     color: var(--red-color);
+}
+
+.dropdown-menu li button {
+    background-color: #FF2A30;
 }
