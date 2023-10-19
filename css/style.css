@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Montserrat";
+    font-family: "Montserrat", Arial, sans-serif;
     background-color: #161a1d;
     color: white;
 }
@@ -24,6 +24,7 @@ body {
     font-weight: 600;
     color: #fff;
     transition: 0.3 ease-in-out;
+    background-color: var(--red-color);
 }
 
 .navbar-brand:hover,
@@ -96,33 +97,6 @@ textarea:valid:focus {
 }
 
 /* ABA SERVIÇOS */
-
-.main-servicos {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
-    row-gap: 50px;
-    column-gap: 50px;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.bloco-servicos {
-    min-width: 500px;
-    min-height: 250px;
-    background-color: var(--red-color);
-    border-radius: 15px;
-    border: none;
-
-    font-style: "Montserrat";
-    font-weight: 700;
-    color: white;
-    font-size: 1.5rem;
-}
-
 .modal-content {
     background-color: #161a1d;
 }
