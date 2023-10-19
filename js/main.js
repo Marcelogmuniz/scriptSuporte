@@ -158,3 +158,59 @@ function mostrarOpcaoSelecionada() {
         divOpcaoSelecionada.style.display = 'none';
     }
 }
+
+function formatarTelefoneOSCarro() {
+    const carroTel = document.getElementById('carroTel');
+    let telCarro = inputTel.value.replace(/\D/g, ''); // Remove tudo que não é dígito (números) do telefone
+
+    if (telCarro.length === 11) {
+        // Formata telefone celular (11 9 1234-5678)
+        telCarro = telCarro.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2 $3');
+    } else if (telCarro.length === 10 || telCarro.length === 9) {
+        // Formata telefone fixo com DDD ou celular sem DDD (11 1234-5678)
+        telCarro = telCarro.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+    }
+
+    carroTel.value = telCarro;
+}
+
+function copiarOSCarro() {
+    const carroAgendamento = document.getElementById('carroAgendamento').value;
+    // Extrair o dia, mês e ano da data ISO
+    const anoCarro = carroAgendamento.substring(0, 4);
+    const mesCarro = carroAgendamento.substring(5, 7);
+    const diaCarro = carroAgendamento.substring(8, 10);
+    // Formatar a data no padrão dd/mm/yyyy
+    const dataCarroAgendamento = `${diaCarro}/${mesCarro}/${anoCarro}`;
+    // Exibir a data formatada ao usuário
+
+    const carroCLiente = document.getElementById('carroCLiente').value;
+    const carroSolicitacao = document.getElementById('carroSolicitacao').value;
+    const carroOperador = document.getElementById('carroOperador').value;
+
+    const scriptCarro = `MOTIVO: ${motivo}
+
+CLIENTE: ${carroCLiente}
+AGENDAMENTO: ${dataCarroAgendamento}
+TEL.: ${carroTel}
+SOLICITAÇÃO ${carroSolicitacao}
+
+OP.: ${carroOperador}`;
+
+    // Copiar o texto para a área de transferência (clipboard)
+    const tempElement = document.createElement('textarea');
+    tempElement.value = scriptCarro;
+    document.body.appendChild(tempElement);
+    tempElement.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempElement);
+
+    alert('Script copiado para a área de transferência!');
+}
+
+function limparOSCarro() {
+    document.getElementById('carroCLiente').value = '';
+    document.getElementById('carroSolicitacao').value = '';
+    document.getElementById('carroAgendamento').value = '';
+    document.getElementById('carroTel').value = '';
+}
