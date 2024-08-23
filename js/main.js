@@ -36,10 +36,12 @@ function copiarScript() {
     const operador = document.getElementById('operador').value;
 
     const scriptFormatado = `MOTIVO: ${motivo}
-
+    
 TEL.: ${telefone}
 
 OP.: ${operador}`;
+
+    console.log(`MOTIVO: ${motivo} TEL.: ${telefone} OP.: ${operador}`)
 
     // Copiar o texto para a área de transferência (clipboard)
     const tempElement = document.createElement('textarea');
