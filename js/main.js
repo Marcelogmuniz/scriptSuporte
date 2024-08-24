@@ -35,14 +35,15 @@ function copiarScript() {
     const telefone = document.getElementById('tel').value;
     const operador = document.getElementById('operador').value;
 
-    const scriptFormatado = `MOTIVO: ${motivo}\n\nTEL.: ${telefone}\n\nOP.: ${operador}`;
+    const scriptFormatado = `MOTIVO: ${motivo}
 
-    // Decodificar o texto para lidar com caracteres especiais
-    const textoDecodificado = decodeURIComponent(escape(scriptFormatado));
+TEL.: ${telefone}
 
-    // Copiar o texto decodificado para a área de transferência
+OP.: ${operador}`;
+
+    // Copiar o texto para a área de transferência (clipboard)
     const tempElement = document.createElement('textarea');
-    tempElement.value = textoDecodificado;
+    tempElement.value = scriptFormatado;
     document.body.appendChild(tempElement);
     tempElement.select();
     document.execCommand('copy');
