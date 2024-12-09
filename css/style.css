@@ -30,10 +30,12 @@ body {
 .navbar-brand:hover,
 .nav-link:hover {
     color: #8d99ae;
+    background-color: var(--red-color);
 }
 
 .nav-link:focus {
     color: #8d99ae;
+    background-color: var(--red-color);
 }
 
 .div-script {
@@ -132,5 +134,5 @@ textarea:valid:focus {
 }
 
 .dropdown-menu li button {
-    background-color: #FF2A30;
+    background-color: #00a6fb;
 }
