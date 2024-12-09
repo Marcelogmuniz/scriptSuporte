@@ -6,7 +6,7 @@
 
 body {
     font-family: "Montserrat";
-    background-color: #161a1d;
+    background-color: #0582ca;
     color: white;
 }
 
@@ -22,7 +22,7 @@ body {
 
 .nav-link {
     font-weight: 600;
-    color: #fff;
+    color: #5adbff;
     transition: 0.3 ease-in-out;
     background-color: var(--red-color);
 }
